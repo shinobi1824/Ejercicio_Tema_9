@@ -3,7 +3,7 @@ public class Main {
 
         Persona persona = new Persona();
         Cliente cliente = new Cliente();
-        Trabajadr trabajador = new Trabajadr();
+        Trabajador trabajador = new Trabajador();
 
         persona.setEdad(37);
         persona.setNombre("Carlos Hernandez");
@@ -36,33 +36,31 @@ public class Main {
         System.out.println(trabajador.getTelefono());
         System.out.println(trabajador.getSalario());
     }
-
-   static class Persona {
-        private int edad;
-        private String nombre;
-        private int telefono;
-
-        public void setEdad(int Edad){this.edad = Edad;}
-        public void setNombre(String Nombre){this.nombre =Nombre;}
-        public void setTelefono(int telefono) {this.telefono = telefono;}
-
-        public int getEdad(){return edad;}
-        public String getNombre(){return nombre;}
-        public int  getTelefono(){return telefono;}
-
     }
+class Persona {
+    private int edad;
+    private String nombre;
+    private int telefono;
 
-    static class Cliente extends Persona {
-        private float credito;
+    public void setEdad(int Edad){this.edad = Edad;}
+    public void setNombre(String Nombre){this.nombre =Nombre;}
+    public void setTelefono(int telefono) {this.telefono = telefono;}
 
-        public void setCredito(float credito){this.credito = credito;}
-        public float getCredito(){return credito;}
-    }
-    static class Trabajadr extends Persona{
-        private float salario;
+    public int getEdad(){return edad;}
+    public String getNombre(){return nombre;}
+    public int  getTelefono(){return telefono;}
 
-        public void setSalario(float salario){this.salario = salario;}
-        public float getSalario(){return salario;}
+}
 
-    }
+class Cliente extends Persona {
+    private float credito;
+
+    public void setCredito(float credito){this.credito = credito;}
+    public float getCredito(){return credito;}
+}
+class Trabajador extends Persona{
+    private float salario;
+
+    public void setSalario(float salario){this.salario = salario;}
+    public float getSalario(){return salario;}
 }
